@@ -17,7 +17,7 @@ typedef struct {
     int Against;
     int Abstain;
     int totalVotes;
-    bool resolutionPassed;  // To track whether the resolution passed or failed
+    bool resolutionPassed;  
 } VotingResult;
 
 const char *countryList[MAX_COUNTRIES] = {
@@ -27,12 +27,11 @@ const char *countryList[MAX_COUNTRIES] = {
     "Belarus", "Belgium", "Belize", "Benin", "Bhutan"
 };
 
-// Add more categories for voting
+
 const char *categoryList[] = {
     "Climate Change", "Human Rights", "Economic Policy", "Global Health", "Technology Development"
 };
 
-// Function to set console text color
 void setConsoleColor(WORD color) {
     HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     SetConsoleTextAttribute(hConsole, color);
